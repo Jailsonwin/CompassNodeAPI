@@ -1,4 +1,4 @@
-__node_modules
+node_modules
 /app/dist/js/config/dbConnect.js
 /app/src/config/dbConnect.ts
-node_modules
+
