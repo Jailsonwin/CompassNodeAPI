@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/style.css">
     <title>API REST</title>
 </head>
-<body onload="fetchUsers(); fetchData();">
-    <header>
-        <div class="title">
-            <h2>Node API Project</h2>
-        </div>
+<body onload="fetchUsers();">
+    <div class="title">
+        <h2>Node API Project</h2>
+    </div>
+<div class="container">
+    <div class="options">
         <div class="buttons">
             <button onclick="window.location = './views/userAdd.html';">
                 Create User
@@ -19,9 +22,8 @@
                 Create Task
             </button>
         </div>
-    </header>
-    <main>
-        <div class="container">
+    </div>
+    <div class="results">
             <div class="users-container">
                 <h3>Users</h3>
                 <ul id="users"></ul>
@@ -30,7 +32,7 @@
                 <h3>Tasks</h3>
                 <ul id="tasks"></ul>
             </div>
-        </div>
-    </main> 
+    </div>
+</div>
 </body>
 </html>
