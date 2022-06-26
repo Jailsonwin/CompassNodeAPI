@@ -8,8 +8,29 @@
 </head>
 <body onload="fetchUsers(); fetchData();">
     <header>
+        <div class="title">
+            <h2>Node API Project</h2>
+        </div>
+        <div class="buttons">
+            <button onclick="window.location = './views/userAdd.html';">
+                Create User
+            </button>
+            <button onclick="window.location = './views/taskAdd.html';">
+                Create Task
+            </button>
+        </div>
     </header>
     <main>
+        <div class="container">
+            <div class="users-container">
+                <h3>Users</h3>
+                <ul id="users"></ul>
+            </div>
+            <div class="tasks-container">
+                <h3>Tasks</h3>
+                <ul id="tasks"></ul>
+            </div>
+        </div>
     </main> 
 </body>
 </html>
