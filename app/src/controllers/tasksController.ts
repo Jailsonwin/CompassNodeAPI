@@ -1,6 +1,7 @@
 import tasks from "../models/Task.js";
 
 class TaskController {
+
     static listTasks = (req, res) => {
         tasks.find()
             .populate('user')

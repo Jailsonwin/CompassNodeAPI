@@ -4,10 +4,12 @@ import tasks from "./tasksRoutes.js";
 import { Express } from "express-serve-static-core";
 
 const routes = (app: Express) => {
+
     app.route("/").get((req, res) => {
         res.status(200).send({name: "REST API"});
     });
     app.use(express.json(), users, tasks);
+
 };
 
 export default routes;
