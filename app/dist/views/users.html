@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>API REST</title>
+</head>
+<body onload="fetchUsers()">
+    <header>
+        <section class="top-section">
+            <div class="title-container">
+                <h1>Users</h1>
+            </div>
+        </section>
+    </header>
+    <main>
+        <section class="addUser-container">
+            <a href="../index.html">
+                <button>Home</button>
+            </a>
+            <a href="./NewUser.html">
+                <button>New User</button>
+            </a>
+        </section>
+        <section class="filters-container">
+            <div class="filter">
+                <input id="user-search" type="text" placeholder="Search user">
+            </div>
+        </section>
+        <section class="main-content">
+            <div class="users-container">
+            </div>
+        </section>
+    </main>
+    <div class="modal" id="modal">
+        <div class="modalContent">
+            <form class="modalInput">
+                <div class="modal-rows">
+                    <input type="text" name="name" placeholder="Name" id="nameEdit">
+                    <input type="text" name="cpf" placeholder="CPF" id="cpfEdit">
+                    <input type="date" name="birthDate" id="birthdateEdit">
+                    <input type="email" name="email" placeholder="Email" id="emailEdit">
+                    <input type="text" name="password" placeholder="Password" id="passwordEdit">
+                    <input type="text" name="address" placeholder="address" id="addressEdit">
+                    <input type="text" name="number" placeholder="number" id="numberEdit">
+                    <input type="text" name="complement" placeholder="Complement" id="complementEdit">
+                    <input type="text" name="city" placeholder="City" id="cityEdit">
+                    <input type="text" name="state" placeholder="State" id="stateEdit">
+                    <input type="text" name="country" placeholder="Country" id="countryEdit">
+                    <input type="text" name="zipCode" placeholder="zipCode" id="zipCodeEdit">
+                </div>
+                <div class="modalButtons">
+                    <button id="modalCancel" class="remove-btn">
+                        Cancel
+                    </button>
+                    <button id="modalConfirm" class="edit-btn" onclick="putUserData(this)" name="editConfirm" >
+                        Confirm Edit
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="../js/functions/users.js"></script>
+</body>
+</html>

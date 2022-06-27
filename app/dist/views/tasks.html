@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>API REST</title>
+</head>
+<body onload="fetchTasks(); populateSelectUser(); populateSelectEditUser()">
+    <header>
+        <section class="top-section">
+            <div class="title-container">
+                <h1>Tasks</h1>
+            </div>
+        </section>
+    </header>
+    <main>
+        <section class="addTask-container">
+            <a href="../index.html">
+                <button>Home</button>
+            </a>
+            <a href="./NewTask.html">
+                <button>New Task</button>
+            </a>
+        </section>
+        <section class="filters-container">
+            <div class="filter">
+                <input id="task-search" type="text" placeholder="Search task">
+            </div>
+        </section>
+        <section class="main-content">
+            <div class="tasks-container">
+            </div>
+        </section>
+    </main>
+    <div class="modal" id="modal">
+        <div class="modalContent">
+            <form class="modalInput">
+                <div class="modal-rows">
+                    <input type="text" name="description" placeholder="Description" id="descriptionEdit">
+                    <input type="datetime-local" name="time" id="timeEdit">
+                    <select name="user" id="userEdit">
+                        <option value="">Select user</option>
+                    </select>
+                </div>
+                <div class="modalButtons">
+                    <button id="modalCancel" class="remove-btn">
+                        Cancel
+                    </button>
+                    <button id="modalConfirm" class="edit-btn" onclick="putTaskData(this)" name="editConfirm" >
+                        Confirm Edit
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="../js/functions/tasks.js"></script>
+</body>
+</html>
