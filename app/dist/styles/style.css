@@ -6,13 +6,15 @@
 }
 
 html, body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: #ff7434;
 }
 
 .top-section {
   width: 100%;
-  background-color: #e2f8ff;
-  border-bottom: 2px solid lightblue;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -32,19 +34,16 @@ html, body {
 .top-section .title-container {
   margin: 3% auto 2% auto;
   width: 90%;
-  border-bottom: 2px solid lightblue;
-  border-width: 5px;
 }
 
 .top-section .title-container h1 {
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 4rem;
   padding-bottom: 1%;
 }
 
-.top-section .buttons-container {
-  width: 100%;
-  margin-bottom: 3%;
+.buttons-container {
+  margin-top: 5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -59,34 +58,13 @@ html, body {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  margin: auto;
   -ms-flex-direction: row;
       flex-direction: row;
 }
 
-.top-section .buttons-container button {
-  padding: 20px;
-  background-color: white;
-  font-family: "Poppins", sans-serif;
-  font-weight: bold;
-  outline: none;
-  border: 2px solid lightblue;
-  border-radius: 15px;
-  -webkit-transition: 240ms ease-in-out;
-  transition: 240ms ease-in-out;
-  cursor: pointer;
-}
-
-.top-section .buttons-container button:hover {
-  background-color: lightblue;
-  color: white;
-}
-
-.main-content {
-  width: 100%;
-  margin-top: 3%;
+.buttons-container .newUser-btn, .buttons-container .newTask-btn {
+  width: 60%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -101,9 +79,89 @@ html, body {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+  margin-top: 5%;
+  -ms-flex-direction: row;
+      flex-direction: row;
+}
+
+.buttons-container .newUser-btn button, .buttons-container .newTask-btn button {
+  padding: 20px;
+  width: 80%;
+  background-color: #f0fbff;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: black;
+  outline: none;
+  border: 2px solid #ff8800;
+  border-radius: 5px;
+  -webkit-transition: 150ms ease-in-out;
+  transition: 150ms ease-in-out;
+  cursor: pointer;
+}
+
+.buttons-container .newUser-btn button:hover, .buttons-container .newTask-btn button:hover {
+  background-color: #ff7b00;
+}
+
+.filters-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -ms-flex-direction: row;
+      flex-direction: row;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  margin: 2% auto;
+}
+
+.filters-container .filter {
+  width: 80%;
+}
+
+.filters-container .filter input {
+  width: 100%;
+  padding: 15px;
+  font-family: "Roboto", sans-serif;
+  border: 2px solid #f59312e3;
+  outline: none;
+  border-radius: 20px 20px 1px 1px;
+}
+
+.filters-container .filter input:hover, .filters-container .filter input:focus {
+  border: 2px solid #ff5100;
+}
+
+.main-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  width: 100%;
+  justify-content: center;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -112,7 +170,8 @@ html, body {
 }
 
 .main-content .users-container {
-  width: 40%;
+  background-color: white;
+  width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -122,9 +181,12 @@ html, body {
           flex-direction: column;
   text-align: left;
   padding: 20px;
-  border: 2px solid lightblue;
-  border-radius: 10px;
+  border: 2px solid #f59312e3;
+  border-radius: 0px 0px 20px 20px;
   word-wrap: break-word;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .main-content .users-container h1 {
@@ -134,23 +196,84 @@ html, body {
   margin-bottom: 10%;
 }
 
-.main-content .users-container #users li {
-  margin-bottom: 2%;
-}
-
-.main-content .users-container #users li span {
-  font-weight: bold;
-}
-
-.main-content .users-container #users .last-li {
+.main-content .users-container .user-ul {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   margin-bottom: 8%;
 }
 
+.main-content .users-container .user-ul li {
+  margin-bottom: 2%;
+}
+
+.main-content .users-container .user-ul li span {
+  font-weight: bold;
+}
+
+.main-content .users-container .user-ul .edit-btn {
+  padding: 12px;
+  margin-top: 5%;
+  margin-bottom: 2%;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  outline: none;
+  color: #2e2e2e;
+  background-color: #acacac;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  -webkit-transition: 100ms ease-in-out;
+  transition: 100ms ease-in-out;
+  cursor: pointer;
+}
+
+.main-content .users-container .user-ul .edit-btn:hover {
+  background-color: #cecece;
+  color: #000000;
+}
+
+.main-content .users-container .user-ul .remove-btn {
+  padding: 12px;
+  width: 100%;
+  background-color: #ff5555;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  color: white;
+  outline: none;
+  border: 2px solid #ff5555;
+  border-radius: 10px;
+  -webkit-transition: 240ms ease-in-out;
+  transition: 240ms ease-in-out;
+  cursor: pointer;
+}
+
+.main-content .users-container .user-ul .remove-btn:hover {
+  background-color: white;
+  color: #ff5555;
+  border: 2px solid #ff5555;
+}
+
 .main-content .tasks-container {
-  width: 40%;
+  width: 80%;
   text-align: left;
   padding: 20px;
-  border: 2px solid lightblue;
+  border: 2px solid #e6e0ad;
   border-radius: 10px;
   word-wrap: break-word;
 }
@@ -162,15 +285,638 @@ html, body {
   margin-bottom: 10%;
 }
 
-.main-content .tasks-container #tasks li {
+.main-content .tasks-container .task-ul {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 8%;
+}
+
+.main-content .tasks-container .task-ul li {
   margin-bottom: 2%;
 }
 
-.main-content .tasks-container #tasks li span {
+.main-content .tasks-container .task-ul li span {
   font-weight: bold;
 }
 
-.main-content .tasks-container #tasks .last-li {
-  margin-bottom: 8%;
+.main-content .tasks-container .task-ul .edit-btn {
+  padding: 10px;
+  margin-top: 5%;
+  margin-bottom: 2%;
+  width: 30%;
+  color: #2e2e2e;
+  background-color: #acacac;
+  border: 1px solid #000000;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  outline: none;
+  border-radius: 10px;
+  -webkit-transition: 240ms ease-in-out;
+  transition: 240ms ease-in-out;
+  cursor: pointer;
+}
+
+.main-content .tasks-container .task-ul .remove-btn {
+  padding: 10px;
+  width: 30%;
+  background-color: #ff5555;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  color: white;
+  outline: none;
+  border: 2px solid #ff5555;
+  border-radius: 10px;
+  -webkit-transition: 240ms ease-in-out;
+  transition: 240ms ease-in-out;
+  cursor: pointer;
+}
+
+.main-content .tasks-container .task-ul .remove-btn:hover {
+  background-color: white;
+  color: #ff5555;
+  border: 2px solid #ff5555;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.6);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+}
+
+.modal .modalContent {
+  background-color: white;
+  border-radius: 8px;
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.modal .modalContent h1 {
+  font-weight: bold;
+  margin-bottom: 5%;
+  border-bottom: 2px solid lightblue;
+  padding-bottom: 1%;
+}
+
+.modal .modalContent .modalInput {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.modal .modalContent .modalInput div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  flex-direction: column;
+}
+
+.modal .modalContent .modalInput input, .modal .modalContent .modalInput select {
+  width: 30%;
+  padding: 12px;
+  outline: none;
+  margin-bottom: 8px;
+  border: 1px solid #ffb52c;
+  font-family: "Roboto", sans-serif;
+  border-radius: 10px;
+  -webkit-transition: 240ms ease-in-out;
+  transition: 240ms ease-in-out;
+}
+
+.modal .modalContent .modalInput input:first-child, .modal .modalContent .modalInput select:first-child {
+  width: 40%;
+}
+
+.modal .modalContent .modalInput input:hover, .modal .modalContent .modalInput input:focus, .modal .modalContent .modalInput select:hover, .modal .modalContent .modalInput select:focus {
+  background-color: #f0fbff;
+}
+
+.modal .modalContent .modalInput .modal-rows {
+  width: 100%;
+}
+
+.modal .modalContent .modalInput .modal-rows input {
+  width: 100%;
+}
+
+.modal .modalContent .modalButtons {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-direction: row;
+      flex-direction: row;
+}
+
+.modal .modalContent .modalButtons .edit-btn {
+  padding: 10px;
+  margin-top: 10px;
+  width: 50%;
+  background-color: #ffcc5f;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  color: black;
+  outline: none;
+  border: 2px solid #ff9a17;
+  border-radius: 10px;
+  -webkit-transition: 240ms ease-in-out;
+  transition: 240ms ease-in-out;
+  cursor: pointer;
+}
+
+.modal .modalContent .modalButtons .edit-btn:hover {
+  background-color: white;
+  color: #000000;
+  border: 2px solid #ffa722;
+}
+
+.modal .modalContent .modalButtons .remove-btn {
+  margin-top: 10px;
+  padding: 10px;
+  width: 50%;
+  background-color: #ffa0a0;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  color: black;
+  outline: none;
+  border: 2px solid #ff5555;
+  border-radius: 10px;
+  -webkit-transition: 240ms ease-in-out;
+  transition: 240ms ease-in-out;
+  cursor: pointer;
+}
+
+.modal .modalContent .modalButtons .remove-btn:hover {
+  background-color: white;
+  color: #ff5555;
+  border: 2px solid #ff5555;
+}
+
+@media screen and (max-width: 790px) {
+  .top-section .buttons-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .top-section .buttons-container .newUser-btn, .top-section .buttons-container .newTask-btn {
+    width: 80%;
+    margin: 3% auto;
+  }
+  .filters-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 5%;
+    width: 100%;
+  }
+  .filters-container .filter {
+    width: 80%;
+    margin-bottom: 3%;
+  }
+  .main-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .main-content .users-container {
+    width: 80%;
+    margin-bottom: 10%;
+  }
+  .main-content .tasks-container {
+    width: 80%;
+  }
+  .main-content .tasks-container .task-ul .edit-btn, .main-content .tasks-container .task-ul .remove-btn {
+    width: 100%;
+  }
+}
+
+.tasks-container {
+  background-color: #f0fbff;
+}
+
+.addTask-container {
+  width: 80%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.addTask-container a {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin: 2%;
+}
+
+.addTask-container a button {
+  width: 10rem;
+  padding: 10px;
+  background-color: #ffb24d;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  color: black;
+  border: 2px solid #ffab2d;
+  outline: none;
+  border-radius: 10px;
+  -webkit-transition: 240ms ease-in-out;
+  transition: 240ms ease-in-out;
+  cursor: pointer;
+}
+
+.addTask-container h1 {
+  font-weight: bold;
+  margin: 3% auto;
+  padding-bottom: 10px;
+}
+
+.addTask-container .form-container {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.addTask-container .form-container form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-direction: row;
+      flex-direction: row;
+}
+
+.addTask-container .form-container form input, .addTask-container .form-container form select {
+  width: 20%;
+  padding: 10px;
+  outline: none;
+  border: 2px solid lightblue;
+  font-family: "Roboto", sans-serif;
+  border-radius: 10px;
+  -webkit-transition: 240ms ease-in-out;
+  transition: 240ms ease-in-out;
+}
+
+.addTask-container .form-container form input:first-child, .addTask-container .form-container form select:first-child {
+  width: 40%;
+}
+
+.addTask-container .form-container form input:hover, .addTask-container .form-container form input:focus, .addTask-container .form-container form select:hover, .addTask-container .form-container form select:focus {
+  background-color: #f0fbff;
+}
+
+.addTask-container .form-container form .add-task {
+  width: 10%;
+  padding: 10px;
+  background-color: #65d3ff;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  color: white;
+  border: 2px solid lightblue;
+  outline: none;
+  border-radius: 10px;
+  -webkit-transition: 240ms ease-in-out;
+  transition: 240ms ease-in-out;
+  cursor: pointer;
+}
+
+.addTask-container .form-container form .add-task:hover {
+  background-color: white;
+  color: black;
+}
+
+@media screen and (max-width: 790px) {
+  .addTask-container a {
+    width: 80%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .addTask-container a button {
+    width: 100%;
+  }
+  .addTask-container .form-container form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .addTask-container .form-container form input, .addTask-container .form-container form select {
+    width: 100%;
+    margin-bottom: 5%;
+  }
+  .addTask-container .form-container form input:first-child, .addTask-container .form-container form select:first-child {
+    width: 100%;
+  }
+  .addTask-container .form-container form .add-task {
+    width: 100%;
+  }
+}
+
+.addUser-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.addUser-container a {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin: 2%;
+}
+
+.addUser-container a button {
+  width: 10rem;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #ffb24d;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  color: black;
+  border: 2px solid #ff9100;
+  outline: none;
+  border-radius: 10px;
+  -webkit-transition: 240ms ease-in-out;
+  transition: 240ms ease-in-out;
+  cursor: pointer;
+}
+
+.addUser-container h1 {
+  font-weight: bold;
+  margin: 3% auto;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #ffb35d;
+}
+
+.addUser-container .form-container {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.addUser-container .form-container form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.addUser-container .form-container form input {
+  padding: 10px;
+  outline: none;
+  border: 2px solid #e6e2ad;
+  font-family: "Roboto", sans-serif;
+  border-radius: 10px;
+  -webkit-transition: 240ms ease-in-out;
+  transition: 240ms ease-in-out;
+}
+
+.addUser-container .form-container form input:hover, .addUser-container .form-container form input:focus {
+  background-color: #f0fbff;
+}
+
+.addUser-container .form-container form div {
+  width: 100%;
+  margin-bottom: 1%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-direction: row;
+      flex-direction: row;
+}
+
+.addUser-container .form-container form .form-rows {
+  padding-top: 15px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.addUser-container .form-container form .form-rows input {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.addUser-container .form-container form .add-user {
+  width: 100%;
+  padding: 20px;
+  margin: 30px;
+  background-color: #ffb24d;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  color: black;
+  outline: none;
+  border-radius: 10px;
+  -webkit-transition: 240ms ease-in-out;
+  transition: 240ms ease-in-out;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 790px) {
+  .addUser-container a {
+    width: 100%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .addUser-container a button {
+    width: 50%;
+  }
+  .addUser-container .form-container form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .addUser-container .form-container form div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .addUser-container .form-container form div input {
+    margin-bottom: 5%;
+  }
+  .addUser-container .form-container form .form-rows {
+    padding-top: 20px;
+    width: 100%;
+  }
+  .addUser-container .form-container form .form-rows input {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

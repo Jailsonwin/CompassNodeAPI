@@ -1,5 +1,3 @@
-
-
 import express from "express";
 import UserController from "../controllers/usersController.js";
 
@@ -13,4 +11,3 @@ router
     .delete("/users/:id", UserController.deleteUser);
 
 export default router;
-

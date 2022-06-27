@@ -8,7 +8,7 @@ const usersRoutes_js_1 = __importDefault(require("./usersRoutes.js"));
 const tasksRoutes_js_1 = __importDefault(require("./tasksRoutes.js"));
 const routes = (app) => {
     app.route("/").get((req, res) => {
-        res.status(200).send({ name: "REST API" });
+        res.status(200).send({ name: "REST API - PB React" });
     });
     app.use(express_1.default.json(), usersRoutes_js_1.default, tasksRoutes_js_1.default);
 };

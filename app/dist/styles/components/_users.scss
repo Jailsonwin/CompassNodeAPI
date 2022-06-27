@@ -1,0 +1,109 @@
+@import '../abstract/variables';
+
+.addUser-container {
+    width: 100%;
+    @include centered();
+    a {
+        align-self: flex-start;
+        margin: 2%;
+        button {
+            width: 10rem;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: rgb(255, 178, 77);
+            font-family: $font;
+            font-weight: bold;
+            color: rgb(0, 0, 0);
+            border: 2px solid rgb(255, 145, 0);
+            outline: none;
+            border-radius: 10px;
+            transition: 240ms ease-in-out;
+            cursor: pointer;
+        }
+    }
+    h1 {
+        font-weight: bold;
+        margin: 3% auto;
+        padding-bottom: 10px;
+        border-bottom: 2px solid rgb(255, 179, 93);
+    }
+    .form-container {
+        width: 80%;
+        @include centered();
+        form {
+            width: 100%;
+            @include centered();
+            input {
+                padding: 10px;
+                outline: none;
+                border: 2px solid rgb(230, 226, 173);
+                font-family: $font;
+                border-radius: 10px;
+                transition: 240ms ease-in-out;
+                &:hover, &:focus {
+                    background-color: #f0fbff;
+                }
+            }
+            div {
+                width: 100%;
+                margin-bottom: 1%;
+                @include centered();
+                justify-content: space-between;
+                flex-direction: row;
+            }
+            .form-rows {
+                padding-top: 15px;
+                flex-direction: column;
+                width: 100%;
+                input {
+                    margin-top: 10px;
+                    width: 100%;
+                }
+            }
+            .add-user {
+                width: 100%;
+                padding: 20px;
+                margin: 30px;
+                background-color: rgb(255, 178, 77);
+                font-family: $font;
+                font-weight: bold;
+                color: rgb(0, 0, 0);
+                outline: none;
+                border-radius: 10px;
+                transition: 240ms ease-in-out;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 790px) {
+    .addUser-container {
+
+        a{
+            width: 100%;
+            align-self: center;
+            button {
+                width: 50%;
+            }
+        }
+        .form-container {
+            form {
+                flex-direction: column;
+                div {
+                    flex-direction: column;
+                    input {
+                        margin-bottom: 5%;
+                    }
+                }
+                .form-rows {
+                    padding-top: 20px;
+                    width: 100%;
+                    input {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -10,17 +10,23 @@ function fetchTasks() {
 }
 function listTasks(tasks) {
     return tasks.map(function (task) {
-        const ul = document.getElementById('tasks');
+        var _a;
+        let ul = document.createElement('ul');
         let description = document.createElement('li');
         let user = document.createElement('li');
         let date = document.createElement('li');
-        user.classList.add("last-li");
+        ul.classList.add("task-ul");
+        description.id = "description";
+        date.id = "date";
+        user.id = "user";
         let edit = document.createElement('button');
         edit.innerHTML = "Edit";
+        edit.classList.add("edit-btn");
         edit.setAttribute('onclick', 'editTask(this)');
         edit.setAttribute('id', task._id);
         let remove = document.createElement('button');
         remove.innerHTML = "Remove";
+        remove.classList.add("remove-btn");
         remove.setAttribute('onclick', 'removeTask(this)');
         remove.setAttribute('id', task._id);
         description.innerHTML = `<span>Description: </span>${task.description}`;
@@ -29,11 +35,13 @@ function listTasks(tasks) {
         ul.appendChild(description);
         ul.appendChild(date);
         ul.appendChild(user);
+        (_a = document.querySelector(".tasks-container")) === null || _a === void 0 ? void 0 : _a.appendChild(ul);
         ul.appendChild(edit);
         ul.appendChild(remove);
     });
 }
-function addTask() {
+function addTask(event) {
+    event.preventDefault();
     const description = document.getElementById('description');
     const datetime = document.getElementById('time');
     const user = document.getElementById('user');
@@ -53,7 +61,36 @@ function addTask() {
         .then(function (json) {
         console.log(json);
     });
+    setTimeout(function () {
+        location.href = './tasks.html';
+    }, 2000);
 }
+const taskSearch = document.getElementById("task-search");
+taskSearch.addEventListener("input", function () {
+    var _a, _b, _c;
+    var taskCards = document.querySelectorAll(".task-ul");
+    if (taskSearch.value.length > 0) {
+        for (var i = 0; i < taskCards.length; i++) {
+            var taskCard = taskCards[i];
+            var descLi = taskCard.querySelector("#description");
+            var dateLi = taskCard.querySelector("#date");
+            var userLi = taskCard.querySelector("#user");
+            let regex = new RegExp(this.value, "i");
+            var searchString = (_a = descLi.textContent) === null || _a === void 0 ? void 0 : _a.split(": ")[1];
+            searchString += (_b = dateLi.textContent) === null || _b === void 0 ? void 0 : _b.split("date: ")[1];
+            searchString += (_c = userLi.textContent) === null || _c === void 0 ? void 0 : _c.split(": ")[1];
+            !regex.test(searchString) ?
+                taskCard.style.display = "none" :
+                taskCard.style.display = "flex";
+        }
+    }
+    else {
+        for (var i = 0; i < taskCards.length; i++) {
+            var taskCard = taskCards[i];
+            taskCard.style.display = "flex";
+        }
+    }
+});
 function editTask(p) {
     fetch(`http://localhost:3000/tasks/${p.id}`, {
         method: "GET"
@@ -62,6 +99,12 @@ function editTask(p) {
     })
         .then(function (data) {
         populateInputTask(data);
+        var modal = document.getElementById("modal");
+        var cancel = document.getElementById("modalCancel");
+        modal.style.display = "block";
+        cancel.onclick = function () {
+            modal.style.display = "none";
+        };
     });
 }
 function putTaskData(p) {
@@ -114,7 +157,6 @@ function removeTask(p) {
     })
         .then(data => listTasks(data))
         .catch(error => console.log(error));
-    window.location.reload();
 }
 function populateSelectUser() {
     const select = document.querySelector('#user');

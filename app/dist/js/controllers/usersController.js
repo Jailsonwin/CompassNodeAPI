@@ -26,7 +26,7 @@ UserController.addUser = (req, res) => {
     let user = new User_js_1.default(req.body);
     user.save((err) => {
         if (err) {
-            res.status(500).send({ message: `${err.message} - There was an error - user not added!` });
+            res.status(500).send({ message: `${err.message} - Error, user not added!` });
         }
         else {
             res.status(201).send(user.toJSON());
@@ -37,7 +37,7 @@ UserController.updateUser = (req, res) => {
     const id = req.params.id;
     User_js_1.default.findByIdAndUpdate(id, { $set: req.body }, (err) => {
         if (!err) {
-            res.status(200).send({ message: "User updated successfully!" });
+            res.status(200).send({ message: "User updated!" });
         }
         else {
             res.status(500).send({ message: err.message });
@@ -48,7 +48,7 @@ UserController.deleteUser = (req, res) => {
     const id = req.params.id;
     User_js_1.default.findByIdAndDelete(id, (err) => {
         if (!err) {
-            res.status(200).send({ message: "User successfully deleted!" });
+            res.status(200).send({ message: "User deleted!" });
         }
         else {
             res.status(500).send({ message: err.message });

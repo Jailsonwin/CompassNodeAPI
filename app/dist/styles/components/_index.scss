@@ -1,84 +1,152 @@
 @import '../abstract/variables';
-
+body{
+    background-color: #ff7434;
+}
 .top-section {
     width: 100%;
-    background-color: #e2f8ff;
-    border-bottom: 2px solid lightblue;
     @include centered();
     .title-container {
         margin: 3% auto 2% auto;
         width: 90%;
-        border-bottom: 2px solid lightblue;
-        border-width: 5px;
         h1 {
             font-weight: bold;
-            font-size: 2rem;
+            font-size: 4rem;
             padding-bottom: 1%;
         }
     }
-    .buttons-container {
-        width: 100%;
-        margin-bottom: 3%;
+}
+
+.buttons-container {
+    margin-top: 5%;
+    @include centered();
+    margin: auto;
+    flex-direction: row;
+    .newUser-btn, .newTask-btn {
+        width: 60%;
         @include centered();
-        justify-content: space-evenly;
+        margin-top: 5%;
         flex-direction: row;
         button {
             padding: 20px;
-            background-color: white;
+            width: 80%;
+            background-color: #f0fbff;
             font-family: $font;
             font-weight: bold;
+            font-size: 1.5rem;
+            color: rgb(0, 0, 0);
             outline: none;
-            border: 2px solid lightblue;
-            border-radius: 15px;
-            transition: 240ms ease-in-out;
+            border: 2px solid rgb(255, 136, 0);
+            border-radius: 5px;
+            transition: 150ms ease-in-out;
             cursor: pointer;
             &:hover {
-                background-color: lightblue;
-                color: white;
+                background-color: rgb(255, 123, 0);
+            }
+        }
+    }
+}
+
+.filters-container {
+    width: 100%;
+    @include centered();
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 2% auto;
+    .filter {
+        width: 80%;
+        input {
+            width: 100%;
+            padding: 15px;
+            font-family: $font;
+            border: 2px solid #f59312e3;
+            outline: none;
+            border-radius: 20px 20px 1px 1px;
+            &:hover, &:focus {
+                border: 2px solid #ff5100;
             }
         }
     }
 }
 
 .main-content {
-    width: 100%;
-    margin-top: 3%;
     @include centered();
-    justify-content: space-evenly;
+    width: 100%;
+    justify-content: center;
     align-items: flex-start;
     flex-direction: row;
+    
     .users-container {
-        width: 40%;
+        background-color: rgb(255, 255, 255);
+        width: 80%;
         display: flex;
         flex-direction: column;
         text-align: left;
         padding: 20px;
-        border: 2px solid lightblue;
-        border-radius: 10px;
+        border: 2px solid #f59312e3;
+        border-radius: 0px 0px 20px 20px;
         word-wrap: break-word;
+        justify-content: center;
         h1 {
             text-align: center;
             font-weight: bold;
             font-size: 1.6rem;
             margin-bottom: 10%;
         }
-        #users {
+        .user-ul {
+            width: 100%;
+            @include centered();
+            align-items: flex-start;
+            margin-bottom: 8%;
             li {
                 margin-bottom: 2%;
                 span {
                     font-weight: bold;
                 }
             }
-            .last-li {
-                margin-bottom: 8%;
+            .edit-btn {
+                padding: 12px;
+                margin-top: 5%;
+                margin-bottom: 2%;
+                width: 100%;
+                font-family: $font;
+                font-weight: bold;
+                outline: none;
+                color: rgb(46, 46, 46);
+                background-color: #acacac;
+                border: 1px solid #000000;
+                border-radius: 10px;
+                transition: 100ms ease-in-out;
+                cursor: pointer;
+                &:hover {
+                    background-color: rgb(206, 206, 206);
+                    color: #000000;
+                }
+            }
+            .remove-btn {
+                padding: 12px;
+                width: 100%;
+                background-color: #ff5555;
+                font-family: $font;
+                font-weight: bold;
+                color: white;
+                outline: none;
+                border: 2px solid #ff5555;
+                border-radius: 10px;
+                transition: 240ms ease-in-out;
+                cursor: pointer;
+                &:hover {
+                    background-color: white;
+                    color: #ff5555;
+                    border: 2px solid #ff5555;
+                }
             }
         }
     }
     .tasks-container {
-        width: 40%;
+        width: 80%;
         text-align: left;
         padding: 20px;
-        border: 2px solid lightblue;
+        border: 2px solid rgb(230, 224, 173);
         border-radius: 10px;
         word-wrap: break-word;
         h1 {
@@ -87,15 +155,195 @@
             font-size: 1.6rem;
             margin-bottom: 10%;
         }
-        #tasks {
+        .task-ul {
+            width: 100%;
+            @include centered();
+            align-items: flex-start;
+            margin-bottom: 8%;
             li {
                 margin-bottom: 2%;
                 span {
                     font-weight: bold;
                 }
             }
-            .last-li {
-                margin-bottom: 8%;
+            .edit-btn {
+                padding: 10px;
+                margin-top: 5%;
+                margin-bottom: 2%;
+                width: 30%;
+                color: rgb(46, 46, 46);
+                background-color: #acacac;
+                border: 1px solid #000000;
+                font-family: $font;
+                font-weight: bold;
+                outline: none;
+                border-radius: 10px;
+                transition: 240ms ease-in-out;
+                cursor: pointer;
+            }
+            .remove-btn {
+                padding: 10px;
+                width: 30%;
+                background-color: #ff5555;
+                font-family: $font;
+                font-weight: bold;
+                color: white;
+                outline: none;
+                border: 2px solid #ff5555;
+                border-radius: 10px;
+                transition: 240ms ease-in-out;
+                cursor: pointer;
+                &:hover {
+                    background-color: white;
+                    color: #ff5555;
+                    border: 2px solid #ff5555;
+                }
+            }
+        }
+    }
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.6);
+    backdrop-filter: blur(2px);
+    .modalContent {
+        background-color: white;
+        border-radius: 8px;
+        margin-top: 5%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 30px;
+        width: 80%;
+        @include centered();
+        h1 {
+            font-weight: bold;
+            margin-bottom: 5%;
+            border-bottom: 2px solid lightblue;
+            padding-bottom: 1%;
+        }
+        .modalInput {
+            width: 90%;
+            @include centered();
+            div {
+                @include centered();
+                width: 100%;
+                justify-content: space-between;
+                flex-direction: column;
+            }
+            input, select {
+                width: 30%;
+                padding: 12px;
+                outline: none;
+                margin-bottom: 8px;
+                border: 1px solid rgb(255, 181, 44);
+                font-family: $font;
+                border-radius: 10px;
+                transition: 240ms ease-in-out;
+                &:first-child {
+                    width: 40%;
+                }
+                &:hover, &:focus {
+                    background-color: #f0fbff;
+                }
+            }
+            .modal-rows {
+                width: 100%;
+                input {
+                    width: 100%;
+                }
+            }
+        }
+        .modalButtons {
+            width: 100%;
+            @include centered();
+            justify-content: space-between;
+            flex-direction: row;
+            .edit-btn {
+                padding: 10px;
+                margin-top: 10px;
+                width: 50%;
+                background-color: #ffcc5f;
+                font-family: $font;
+                font-weight: bold;
+                color: rgb(0, 0, 0);
+                outline: none;
+                border: 2px solid #ff9a17;
+                border-radius: 10px;
+                transition: 240ms ease-in-out;
+                cursor: pointer;
+                &:hover {
+                    background-color: white;
+                    color: #000000;
+                    border: 2px solid #ffa722;
+                }
+            }
+            .remove-btn {
+                margin-top: 10px;
+                padding: 10px;
+                width: 50%;
+                background-color: #ffa0a0;
+                font-family: $font;
+                font-weight: bold;
+                color: rgb(0, 0, 0);
+                outline: none;
+                border: 2px solid #ff5555;
+                border-radius: 10px;
+                transition: 240ms ease-in-out;
+                cursor: pointer;
+                &:hover {
+                    background-color: rgb(255, 255, 255);
+                    color: #ff5555;
+                    border: 2px solid #ff5555;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 790px) {
+    .top-section {
+        .buttons-container {
+            flex-direction: column;
+            .newUser-btn, .newTask-btn {
+                width: 80%;
+                margin: 3% auto;
+            }
+        }
+    }
+
+    .filters-container {
+        flex-direction: column;
+        margin-top: 5%;
+        width: 100%;
+        .filter {
+            width: 80%;
+            margin-bottom: 3%;
+        }
+    }
+
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+        .users-container {
+            width: 80%;
+            margin-bottom: 10%;
+        }
+        .tasks-container {
+            width: 80%;
+            .task-ul {
+                .edit-btn, .remove-btn {
+                    width: 100%;
+                }
             }
         }
     }
