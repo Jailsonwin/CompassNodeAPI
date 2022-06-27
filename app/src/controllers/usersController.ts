@@ -1,12 +1,10 @@
 import users from "../models/User.js";
-
 class UserController {
     static listUsers = (req, res) => {
         users.find((err, users) => {
             res.status(200).json(users);
         });
     }
-
     static listUserById = (req, res) => {
         const id = req.params.id;
 
@@ -18,13 +16,11 @@ class UserController {
             }
         });
     }
-
     static addUser = (req, res) => {
         let user = new users(req.body);
-
         user.save((err) => {
             if(err) {
-                res.status(500).send({message: `${err.message} - There was an error - user not added!`});
+                res.status(500).send({message: `${err.message} - Error, user not added!`});
             } else {
                 res.status(201).send(user.toJSON());
             }
@@ -34,23 +30,21 @@ class UserController {
         const id = req.params.id;
         users.findByIdAndUpdate(id, {$set: req.body}, (err) => {
             if(!err) {
-                res.status(200).send({message: "User updated successfully!"});
+                res.status(200).send({message: "User updated!"});
             } else {
                 res.status(500).send({message: err.message});
             }
         });
     }
-
     static deleteUser = (req, res) => {
         const id = req.params.id;
         users.findByIdAndDelete(id, (err) => {
             if(!err) {
-                res.status(200).send({message: "User successfully deleted!"});
+                res.status(200).send({message: "User deleted!"});
             } else {
                 res.status(500).send({message: err.message});
             }
         });
     }
 }
-
 export default UserController;
