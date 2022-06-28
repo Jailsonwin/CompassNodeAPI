@@ -36,11 +36,17 @@
                         <input type="text" name="password" placeholder="Password" id="password">
                         <input type="text" name="address" placeholder="Address" id="address">
                         <input type="text" name="number" placeholder="Number" id="number">
+                        <span id="erro-input" class="invisible" >This is a required field!</span>
                         <input type="text" name="complement" placeholder="Complement" id="complement">
+                        <span id="erro-input" class="invisible" >This is a required field!</span>
                         <input type="text" name="city" placeholder="City" id="city">
+                        <span id="erro-input" class="invisible" >This is a required field!</span>
                         <input type="text" name="state" placeholder="State" id="state">
+                        <span id="erro-input" class="invisible" >This is a required field!</span>
                         <input type="text" name="country" placeholder="Country" id="country">
+                        <span id="erroCoutry" class="invisible" >This is a required field!</span>
                         <input type="text" name="zipCode" placeholder="Zip Code" id="zipCode">
+                        <span id="erroZip" class="invisible" >This is a required field!</span>
                     </div>
                     
                     <button class="add-user" onclick="addUser(event)">Add User</button>
@@ -50,5 +56,6 @@
     </main>
     <script src="../js/functions/users.js"></script>
     <script src="../js/validation/name.js"></script>
+    <script src="../js/validation/local-required.js"></script>
 </body>
 </html>
