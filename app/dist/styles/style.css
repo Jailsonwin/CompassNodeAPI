@@ -1,8 +1,7 @@
 *,
 *:before,
 *:after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html, body {
@@ -15,27 +14,16 @@ body {
 
 .top-section {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
-
 .top-section .title-container {
   margin: 3% auto 2% auto;
   width: 90%;
 }
-
 .top-section .title-container h1 {
   font-weight: bold;
   font-size: 4rem;
@@ -44,46 +32,24 @@ body {
 
 .buttons-container {
   margin-top: 5%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   margin: auto;
-  -ms-flex-direction: row;
-      flex-direction: row;
+  flex-direction: row;
 }
-
 .buttons-container .newUser-btn, .buttons-container .newTask-btn {
   width: 60%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   margin-top: 5%;
-  -ms-flex-direction: row;
-      flex-direction: row;
+  flex-direction: row;
 }
-
 .buttons-container .newUser-btn button, .buttons-container .newTask-btn button {
   padding: 20px;
   width: 80%;
@@ -91,141 +57,88 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: bold;
   font-size: 1.5rem;
-  color: black;
+  color: rgb(0, 0, 0);
   outline: none;
-  border: 2px solid #ff8800;
+  border: 2px solid rgb(255, 136, 0);
   border-radius: 5px;
-  -webkit-transition: 150ms ease-in-out;
   transition: 150ms ease-in-out;
   cursor: pointer;
 }
-
 .buttons-container .newUser-btn button:hover, .buttons-container .newTask-btn button:hover {
-  background-color: #ff7b00;
+  background-color: rgb(255, 123, 0);
 }
 
 .filters-container {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  -ms-flex-direction: row;
-      flex-direction: row;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  flex-direction: row;
+  justify-content: space-evenly;
   margin: 2% auto;
 }
-
 .filters-container .filter {
   width: 80%;
 }
-
 .filters-container .filter input {
   width: 100%;
   padding: 15px;
   font-family: "Roboto", sans-serif;
-  border: 2px solid #f59312e3;
+  border: 2px solid rgba(245, 147, 18, 0.8901960784);
   outline: none;
   border-radius: 20px 20px 1px 1px;
 }
-
 .filters-container .filter input:hover, .filters-container .filter input:focus {
   border: 2px solid #ff5100;
 }
 
 .main-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   width: 100%;
   justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -ms-flex-direction: row;
-      flex-direction: row;
+  align-items: flex-start;
+  flex-direction: row;
 }
-
 .main-content .users-container {
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   width: 80%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   text-align: left;
   padding: 20px;
-  border: 2px solid #f59312e3;
+  border: 2px solid rgba(245, 147, 18, 0.8901960784);
   border-radius: 0px 0px 20px 20px;
   word-wrap: break-word;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
-
 .main-content .users-container h1 {
   text-align: center;
   font-weight: bold;
   font-size: 1.6rem;
   margin-bottom: 10%;
 }
-
 .main-content .users-container .user-ul {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  align-items: flex-start;
   margin-bottom: 8%;
 }
-
 .main-content .users-container .user-ul li {
   margin-bottom: 2%;
 }
-
 .main-content .users-container .user-ul li span {
   font-weight: bold;
 }
-
 .main-content .users-container .user-ul .edit-btn {
   padding: 12px;
   margin-top: 5%;
@@ -234,20 +147,17 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: bold;
   outline: none;
-  color: #2e2e2e;
+  color: rgb(46, 46, 46);
   background-color: #acacac;
   border: 1px solid #000000;
   border-radius: 10px;
-  -webkit-transition: 100ms ease-in-out;
   transition: 100ms ease-in-out;
   cursor: pointer;
 }
-
 .main-content .users-container .user-ul .edit-btn:hover {
-  background-color: #cecece;
+  background-color: rgb(206, 206, 206);
   color: #000000;
 }
-
 .main-content .users-container .user-ul .remove-btn {
   padding: 12px;
   width: 100%;
@@ -258,80 +168,59 @@ body {
   outline: none;
   border: 2px solid #ff5555;
   border-radius: 10px;
-  -webkit-transition: 240ms ease-in-out;
   transition: 240ms ease-in-out;
   cursor: pointer;
 }
-
 .main-content .users-container .user-ul .remove-btn:hover {
   background-color: white;
   color: #ff5555;
   border: 2px solid #ff5555;
 }
-
 .main-content .tasks-container {
   width: 80%;
   text-align: left;
   padding: 20px;
-  border: 2px solid #e6e0ad;
+  border: 2px solid rgb(230, 224, 173);
   border-radius: 10px;
   word-wrap: break-word;
 }
-
 .main-content .tasks-container h1 {
   text-align: center;
   font-weight: bold;
   font-size: 1.6rem;
   margin-bottom: 10%;
 }
-
 .main-content .tasks-container .task-ul {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  align-items: flex-start;
   margin-bottom: 8%;
 }
-
 .main-content .tasks-container .task-ul li {
   margin-bottom: 2%;
 }
-
 .main-content .tasks-container .task-ul li span {
   font-weight: bold;
 }
-
 .main-content .tasks-container .task-ul .edit-btn {
   padding: 10px;
   margin-top: 5%;
   margin-bottom: 2%;
   width: 30%;
-  color: #2e2e2e;
+  color: rgb(46, 46, 46);
   background-color: #acacac;
   border: 1px solid #000000;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
   outline: none;
   border-radius: 10px;
-  -webkit-transition: 240ms ease-in-out;
   transition: 240ms ease-in-out;
   cursor: pointer;
 }
-
 .main-content .tasks-container .task-ul .remove-btn {
   padding: 10px;
   width: 30%;
@@ -342,11 +231,9 @@ body {
   outline: none;
   border: 2px solid #ff5555;
   border-radius: 10px;
-  -webkit-transition: 240ms ease-in-out;
   transition: 240ms ease-in-out;
   cursor: pointer;
 }
-
 .main-content .tasks-container .task-ul .remove-btn:hover {
   background-color: white;
   color: #ff5555;
@@ -362,12 +249,11 @@ body {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: black;
+  background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.6);
   -webkit-backdrop-filter: blur(2px);
           backdrop-filter: blur(2px);
 }
-
 .modal .modalContent {
   background-color: white;
   border-radius: 8px;
@@ -376,115 +262,64 @@ body {
   margin-right: auto;
   padding: 30px;
   width: 80%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
-
 .modal .modalContent h1 {
   font-weight: bold;
   margin-bottom: 5%;
   padding-bottom: 1%;
 }
-
 .modal .modalContent .modalInput {
   width: 90%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
-
 .modal .modalContent .modalInput div {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   width: 100%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   flex-direction: column;
 }
-
 .modal .modalContent .modalInput input, .modal .modalContent .modalInput select {
   width: 30%;
   padding: 12px;
   outline: none;
   margin-bottom: 8px;
-  border: 1px solid #ffb52c;
+  border: 1px solid rgb(255, 181, 44);
   font-family: "Roboto", sans-serif;
   border-radius: 10px;
-  -webkit-transition: 240ms ease-in-out;
   transition: 240ms ease-in-out;
 }
-
 .modal .modalContent .modalInput input:first-child, .modal .modalContent .modalInput select:first-child {
   width: 40%;
 }
-
 .modal .modalContent .modalInput .modal-rows {
   width: 100%;
 }
-
 .modal .modalContent .modalInput .modal-rows input {
   width: 100%;
 }
-
 .modal .modalContent .modalButtons {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-direction: row;
-      flex-direction: row;
+  justify-content: space-between;
+  flex-direction: row;
 }
-
 .modal .modalContent .modalButtons .edit-btn {
   padding: 10px;
   margin-top: 10px;
@@ -492,21 +327,18 @@ body {
   background-color: #ffcc5f;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
-  color: black;
+  color: rgb(0, 0, 0);
   outline: none;
   border: 2px solid #ff9a17;
   border-radius: 10px;
-  -webkit-transition: 240ms ease-in-out;
   transition: 240ms ease-in-out;
   cursor: pointer;
 }
-
 .modal .modalContent .modalButtons .edit-btn:hover {
   background-color: white;
   color: #000000;
   border: 2px solid #ffa722;
 }
-
 .modal .modalContent .modalButtons .remove-btn {
   margin-top: 10px;
   padding: 10px;
@@ -514,37 +346,30 @@ body {
   background-color: #ffa0a0;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
-  color: black;
+  color: rgb(0, 0, 0);
   outline: none;
   border: 2px solid #ff5555;
   border-radius: 10px;
-  -webkit-transition: 240ms ease-in-out;
   transition: 240ms ease-in-out;
   cursor: pointer;
 }
-
 .modal .modalContent .modalButtons .remove-btn:hover {
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   color: #ff5555;
   border: 2px solid #ff5555;
 }
 
 @media screen and (max-width: 790px) {
   .top-section .buttons-container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .top-section .buttons-container .newUser-btn, .top-section .buttons-container .newTask-btn {
     width: 80%;
     margin: 3% auto;
   }
+
   .filters-container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     margin-top: 5%;
     width: 100%;
   }
@@ -552,14 +377,10 @@ body {
     width: 80%;
     margin-bottom: 3%;
   }
+
   .main-content {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
   .main-content .users-container {
     width: 80%;
@@ -572,7 +393,6 @@ body {
     width: 100%;
   }
 }
-
 .tasks-container {
   background-color: #f0fbff;
 }
@@ -580,116 +400,74 @@ body {
 .addTask-container {
   width: 80%;
   margin: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
-
 .addTask-container a {
-  -ms-flex-item-align: start;
-      align-self: flex-start;
+  align-self: flex-start;
   margin: 2%;
 }
-
 .addTask-container a button {
   width: 10rem;
   padding: 10px;
-  background-color: #ffb24d;
+  background-color: rgb(255, 178, 77);
   font-family: "Roboto", sans-serif;
   font-weight: bold;
-  color: black;
-  border: 2px solid #ffab2d;
+  color: rgb(0, 0, 0);
+  border: 2px solid rgb(255, 171, 45);
   outline: none;
   border-radius: 10px;
-  -webkit-transition: 240ms ease-in-out;
   transition: 240ms ease-in-out;
   cursor: pointer;
 }
-
 .addTask-container h1 {
   font-weight: bold;
   margin: 3% auto;
   padding-bottom: 10px;
 }
-
 .addTask-container .form-container {
   width: 80%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
-
 .addTask-container .form-container form {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-direction: row;
-      flex-direction: row;
+  justify-content: space-between;
+  flex-direction: row;
 }
-
 .addTask-container .form-container form input, .addTask-container .form-container form select {
   width: 20%;
   padding: 10px;
   outline: none;
-  border: 2px solid #e6d2ad;
+  border: 2px solid rgb(230, 210, 173);
   font-family: "Roboto", sans-serif;
   border-radius: 10px;
-  -webkit-transition: 240ms ease-in-out;
   transition: 240ms ease-in-out;
 }
-
 .addTask-container .form-container form input:first-child, .addTask-container .form-container form select:first-child {
   width: 40%;
 }
-
 .addTask-container .form-container form .add-task {
   width: 10%;
   padding: 10px;
-  background-color: #ffb24d;
+  background-color: rgb(255, 178, 77);
   font-family: "Roboto", sans-serif;
   font-weight: bold;
-  color: black;
-  border: 2px solid #ffb24d;
+  color: rgb(0, 0, 0);
+  border: 2px solid rgb(255, 178, 77);
   outline: none;
   border-radius: 10px;
-  -webkit-transition: 240ms ease-in-out;
   transition: 240ms ease-in-out;
   cursor: pointer;
 }
@@ -697,18 +475,13 @@ body {
 @media screen and (max-width: 790px) {
   .addTask-container a {
     width: 80%;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
+    align-self: center;
   }
   .addTask-container a button {
     width: 100%;
   }
   .addTask-container .form-container form {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .addTask-container .form-container form input, .addTask-container .form-container form select {
     width: 100%;
@@ -721,174 +494,119 @@ body {
     width: 100%;
   }
 }
-
 .addUser-container {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
-
 .addUser-container a {
-  -ms-flex-item-align: start;
-      align-self: flex-start;
+  align-self: flex-start;
   margin: 2%;
 }
-
 .addUser-container a button {
   width: 10rem;
   padding: 10px;
   margin-bottom: 10px;
-  background-color: #ffb24d;
+  background-color: rgb(255, 178, 77);
   font-family: "Roboto", sans-serif;
   font-weight: bold;
-  color: black;
-  border: 2px solid #ff9100;
+  color: rgb(0, 0, 0);
+  border: 2px solid rgb(255, 145, 0);
   outline: none;
   border-radius: 10px;
-  -webkit-transition: 240ms ease-in-out;
   transition: 240ms ease-in-out;
   cursor: pointer;
 }
-
 .addUser-container h1 {
   font-weight: bold;
   margin: 3% auto;
   padding-bottom: 10px;
-  border-bottom: 2px solid #ffb35d;
+  border-bottom: 2px solid rgb(255, 179, 93);
 }
-
 .addUser-container .form-container {
   width: 80%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
-
 .addUser-container .form-container form {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
-
 .addUser-container .form-container form input {
   padding: 10px;
   outline: none;
-  border: 2px solid #e6e2ad;
+  border: 2px solid rgb(230, 226, 173);
   font-family: "Roboto", sans-serif;
   border-radius: 10px;
-  -webkit-transition: 240ms ease-in-out;
   transition: 240ms ease-in-out;
 }
-
 .addUser-container .form-container form div {
   width: 100%;
   margin-bottom: 1%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-direction: row;
-      flex-direction: row;
+  justify-content: space-between;
+  flex-direction: row;
 }
-
 .addUser-container .form-container form .form-rows {
   padding-top: 15px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   width: 100%;
 }
-
 .addUser-container .form-container form .form-rows input {
   margin-top: 10px;
   width: 100%;
 }
-
 .addUser-container .form-container form .add-user {
   width: 100%;
   padding: 20px;
   margin: 30px;
-  background-color: #ffb24d;
+  background-color: rgb(255, 178, 77);
   font-family: "Roboto", sans-serif;
   font-weight: bold;
-  color: black;
+  color: rgb(0, 0, 0);
   outline: none;
   border-radius: 10px;
-  -webkit-transition: 240ms ease-in-out;
   transition: 240ms ease-in-out;
   cursor: pointer;
+}
+.addUser-container .form-container span {
+  color: rgb(230, 62, 62);
+  font-size: 12px;
+}
+.addUser-container .form-container .errorInput {
+  border: 2px solid rgb(230, 62, 62) !important;
+}
+.addUser-container .form-container .invisible {
+  display: none;
 }
 
 @media screen and (max-width: 790px) {
   .addUser-container a {
     width: 100%;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
+    align-self: center;
   }
   .addUser-container a button {
     width: 50%;
   }
   .addUser-container .form-container form {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .addUser-container .form-container form div {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .addUser-container .form-container form div input {
     margin-bottom: 5%;
@@ -900,5 +618,4 @@ body {
   .addUser-container .form-container form .form-rows input {
     width: 100%;
   }
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

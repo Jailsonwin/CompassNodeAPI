@@ -28,6 +28,8 @@
                 <form>
                     <div class="form-rows">
                         <input type="text" name="name" placeholder="Name" id="name">
+                        <span id="erro-input" class="invisible" >This is a required field!</span>
+                        <span id="erro-name" class="invisible" >Invalid Name</span>
                         <input type="text" name="cpf" placeholder="CPF" id="cpf">
                         <input type="date" name="birthDate" id="birthdate">
                         <input type="email" name="email" placeholder="Email" id="email">
@@ -47,5 +49,6 @@
         </section>
     </main>
     <script src="../js/functions/users.js"></script>
+    <script src="../js/validation/name.js"></script>
 </body>
 </html>
