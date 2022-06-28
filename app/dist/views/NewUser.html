@@ -33,6 +33,8 @@
                         <input type="text" name="cpf" placeholder="CPF" id="cpf">
                         <input type="date" name="birthDate" id="birthdate">
                         <input type="email" name="email" placeholder="Email" id="email">
+                        <span id="erroEmail" class="invisible" >This is a required field!</span>
+                        <span id="erroInvalidemail" class="invisible" >Invalid email!</span>
                         <input type="text" name="password" placeholder="Password" id="password">
                         <span id="erroPass" class="invisible" >This is a required field!</span>
                         <span id="erroInvalidpass" class="invisible" >Password must contain at least 6 characters!</span>
@@ -61,5 +63,6 @@
     <script src="../js/validation/name.js"></script>
     <script src="../js/validation/local-required.js"></script>
     <script src="../js/validation/password.js"></script>
+    <script src="../js/validation/email.js"></script>
 </body>
 </html>
