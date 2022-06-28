@@ -6,9 +6,7 @@ function validateAge() {
     var erroAge = document.querySelector("#erroAge");
     var erroInvalidage = document.querySelector("#erroInvalidage");
     let date = document.getElementById('birthdate');
-    let birth = `${date.value.split("-")[0]}
-                    -${date.value.split("-")[1]}
-                    -${date.value.split("-")[2]}`;
+    let birth = `${date.value.split("-")[0]}-${date.value.split("-")[1]}-${date.value.split("-")[2]}`;
     let Ndate = new Date(birth);
     let diff = Date.now() - Ndate.getTime();
     let NNdate = new Date(diff);
