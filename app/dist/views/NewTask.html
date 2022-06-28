@@ -27,7 +27,9 @@
             <div class="form-container">
                 <form>
                     <input type="text" name="description" placeholder="Description" id="description">
+                    <span id="erroDescription" class="invisible" >This is a required field!</span>
                     <input type="datetime-local" name="time" id="time">
+                    <span id="erroTime" class="invisible" >This is a required field!</span>
                     <select name="user" id="user">
                         <option value="">Select user</option>
                     </select>
@@ -37,5 +39,6 @@
         </section>
     </main>
     <script src="../js/functions/tasks.js"></script>
+    <script src="../js/validation/task.js"></script>
 </body>
 </html>

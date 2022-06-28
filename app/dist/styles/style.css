@@ -310,6 +310,16 @@ body {
 .modal .modalContent .modalInput .modal-rows input {
   width: 100%;
 }
+.modal .modalContent .modalInput span {
+  color: rgb(230, 62, 62);
+  font-size: 12px;
+}
+.modal .modalContent .modalInput .errorInput {
+  border: 2px solid rgb(230, 62, 62) !important;
+}
+.modal .modalContent .modalInput .invisible {
+  display: none;
+}
 .modal .modalContent .modalButtons {
   width: 100%;
   display: flex;
@@ -471,6 +481,16 @@ body {
   transition: 240ms ease-in-out;
   cursor: pointer;
 }
+.addTask-container .form-container span {
+  color: rgb(230, 62, 62);
+  font-size: 12px;
+}
+.addTask-container .form-container .errorInput {
+  border: 2px solid rgb(230, 62, 62) !important;
+}
+.addTask-container .form-container .invisible {
+  display: none;
+}
 
 @media screen and (max-width: 790px) {
   .addTask-container a {
@@ -519,6 +539,16 @@ body {
   border-radius: 10px;
   transition: 240ms ease-in-out;
   cursor: pointer;
+}
+.addUser-container a span {
+  color: rgb(230, 62, 62);
+  font-size: 12px;
+}
+.addUser-container a .errorInput {
+  border: 2px solid rgb(230, 62, 62) !important;
+}
+.addUser-container a .invisible {
+  display: none;
 }
 .addUser-container h1 {
   font-weight: bold;

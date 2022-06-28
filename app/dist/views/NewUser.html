@@ -30,8 +30,12 @@
                         <input type="text" name="name" placeholder="Name" id="name">
                         <span id="erro-input" class="invisible" >This is a required field!</span>
                         <span id="erro-name" class="invisible" >Invalid Name</span>
-                        <input type="text" name="cpf" placeholder="CPF" id="cpf">
+                        <input type="text" name="cpf" placeholder="CPF" id="cpf" onkeyup="maskCpf()" maxlength="14">
+                        <span id="erroCpf" class="invisible" >This is a required field!</span>
+                        <span id="erroInvalidcpf" class="invisible" >Invalid Cpf!</span>
                         <input type="date" name="birthDate" id="birthdate">
+                        <span id="erroAge" class="invisible" >This is a required field!</span>
+                        <span id="erroInvalidage" class="invisible" >Must be over 18 years old!</span>
                         <input type="email" name="email" placeholder="Email" id="email">
                         <span id="erroEmail" class="invisible" >This is a required field!</span>
                         <span id="erroInvalidemail" class="invisible" >Invalid email!</span>
@@ -64,5 +68,7 @@
     <script src="../js/validation/local-required.js"></script>
     <script src="../js/validation/password.js"></script>
     <script src="../js/validation/email.js"></script>
+    <script src="../js/validation/age.js"></script>
+    <script src="../js/validation/cpf.js"></script>
 </body>
 </html>
