@@ -1,9 +1,10 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const inputName = document.getElementById('name');
 const inputNameE = document.getElementById('nameEdit');
 inputName.addEventListener("change", validateName);
 inputNameE.addEventListener("change", validateNameE);
-function validateName() {
+function validateName(e) {
     var expression = /^((\b[A-zÀ-ú']{2,40}\b)\s*){2,}$/gm;
     var regex = new RegExp(expression);
     var erroInvName = document.querySelector("#erro-input");
@@ -23,6 +24,7 @@ function validateName() {
         else {
             name.classList.add("errorInput");
             erroName.classList.remove("invisible");
+            e.preventDefault();
         }
         erroInvName.classList.add("invisible");
     }
