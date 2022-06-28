@@ -41,33 +41,26 @@
                 width: 20%;
                 padding: 10px;
                 outline: none;
-                border: 2px solid lightblue;
+                border: 2px solid rgb(230, 210, 173);
                 font-family: $font;
                 border-radius: 10px;
                 transition: 240ms ease-in-out;
                 &:first-child {
                     width: 40%;
                 }
-                &:hover, &:focus {
-                    background-color: #f0fbff;
-                }
             }
             .add-task {
                 width: 10%;
                 padding: 10px;
-                background-color: #65d3ff;
+                background-color: rgb(255, 178, 77);
                 font-family: $font;
                 font-weight: bold;
-                color: white;
-                border: 2px solid lightblue;
+                color: rgb(0, 0, 0);
+                border: 2px solid rgb(255, 178, 77);
                 outline: none;
                 border-radius: 10px;
                 transition: 240ms ease-in-out;
                 cursor: pointer;
-                &:hover {
-                    background-color: white;
-                    color: black;
-                }
             }
         }
     }

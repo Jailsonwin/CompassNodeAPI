@@ -29,7 +29,7 @@ body{
         button {
             padding: 20px;
             width: 80%;
-            background-color: #f0fbff;
+            background-color: #ffffff;
             font-family: $font;
             font-weight: bold;
             font-size: 1.5rem;
@@ -228,7 +228,6 @@ body{
         h1 {
             font-weight: bold;
             margin-bottom: 5%;
-            border-bottom: 2px solid lightblue;
             padding-bottom: 1%;
         }
         .modalInput {
@@ -251,9 +250,6 @@ body{
                 transition: 240ms ease-in-out;
                 &:first-child {
                     width: 40%;
-                }
-                &:hover, &:focus {
-                    background-color: #f0fbff;
                 }
             }
             .modal-rows {

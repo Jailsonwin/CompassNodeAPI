@@ -111,10 +111,20 @@ function addUser(event) {
     .then(function(json) {
         console.log(json);
     });
-    //Redirect
-    setTimeout(function(){
-        location.href = './users.html'
-    },2000);
+
+
+    name.value = "";
+    cpf.value = "";
+    birthDate.value = "";
+    email.value = "";
+    password.value = "";
+    address.value = "";
+    number.value = "";
+    complement.value = "";
+    city.value = "";
+    state.value = "";
+    country.value = "";
+    zipCode.value = "";
 }
 
 function editUser(p: HTMLParamElement) {

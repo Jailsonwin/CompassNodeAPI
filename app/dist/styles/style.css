@@ -87,7 +87,7 @@ body {
 .buttons-container .newUser-btn button, .buttons-container .newTask-btn button {
   padding: 20px;
   width: 80%;
-  background-color: #f0fbff;
+  background-color: #ffffff;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
   font-size: 1.5rem;
@@ -395,7 +395,6 @@ body {
 .modal .modalContent h1 {
   font-weight: bold;
   margin-bottom: 5%;
-  border-bottom: 2px solid lightblue;
   padding-bottom: 1%;
 }
 
@@ -453,10 +452,6 @@ body {
 
 .modal .modalContent .modalInput input:first-child, .modal .modalContent .modalInput select:first-child {
   width: 40%;
-}
-
-.modal .modalContent .modalInput input:hover, .modal .modalContent .modalInput input:focus, .modal .modalContent .modalInput select:hover, .modal .modalContent .modalInput select:focus {
-  background-color: #f0fbff;
 }
 
 .modal .modalContent .modalInput .modal-rows {
@@ -673,7 +668,7 @@ body {
   width: 20%;
   padding: 10px;
   outline: none;
-  border: 2px solid lightblue;
+  border: 2px solid #e6d2ad;
   font-family: "Roboto", sans-serif;
   border-radius: 10px;
   -webkit-transition: 240ms ease-in-out;
@@ -684,28 +679,19 @@ body {
   width: 40%;
 }
 
-.addTask-container .form-container form input:hover, .addTask-container .form-container form input:focus, .addTask-container .form-container form select:hover, .addTask-container .form-container form select:focus {
-  background-color: #f0fbff;
-}
-
 .addTask-container .form-container form .add-task {
   width: 10%;
   padding: 10px;
-  background-color: #65d3ff;
+  background-color: #ffb24d;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
-  color: white;
-  border: 2px solid lightblue;
+  color: black;
+  border: 2px solid #ffb24d;
   outline: none;
   border-radius: 10px;
   -webkit-transition: 240ms ease-in-out;
   transition: 240ms ease-in-out;
   cursor: pointer;
-}
-
-.addTask-container .form-container form .add-task:hover {
-  background-color: white;
-  color: black;
 }
 
 @media screen and (max-width: 790px) {
@@ -827,10 +813,6 @@ body {
   border-radius: 10px;
   -webkit-transition: 240ms ease-in-out;
   transition: 240ms ease-in-out;
-}
-
-.addUser-container .form-container form input:hover, .addUser-container .form-container form input:focus {
-  background-color: #f0fbff;
 }
 
 .addUser-container .form-container form div {

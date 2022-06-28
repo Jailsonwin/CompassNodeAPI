@@ -61,9 +61,12 @@ function addTask(event) {
         .then(function (json) {
         console.log(json);
     });
-    setTimeout(function () {
-        location.href = './tasks.html';
-    }, 2000);
+    //setTimeout(function(){
+    //    location.href = './tasks.html'
+    //},2000);
+    description.value = "";
+    datetime.value = "";
+    user.value = "";
 }
 const taskSearch = document.getElementById("task-search");
 taskSearch.addEventListener("input", function () {
@@ -92,6 +95,7 @@ taskSearch.addEventListener("input", function () {
     }
 });
 function editTask(p) {
+    console.log(p.id);
     fetch(`http://localhost:3000/tasks/${p.id}`, {
         method: "GET"
     }).then(function (response) {

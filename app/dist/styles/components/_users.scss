@@ -40,9 +40,7 @@
                 font-family: $font;
                 border-radius: 10px;
                 transition: 240ms ease-in-out;
-                &:hover, &:focus {
-                    background-color: #f0fbff;
-                }
+
             }
             div {
                 width: 100%;
