@@ -61,7 +61,8 @@ function listUsers(users) {
         ul.appendChild(zipCode);
         ul.appendChild(edit);
         ul.appendChild(remove);
-        (_a = document.querySelector(".users-container")) === null || _a === void 0 ? void 0 : _a.appendChild(ul);
+        (_a = document.querySelector(".users-container-none")) === null || _a === void 0 ? void 0 : _a.appendChild(ul);
+        pagination();
     });
 }
 function addUser(event) {
@@ -244,12 +245,17 @@ userSearch.addEventListener("input", function () {
         }
     }
 });
-function userPaginate() {
-    var cards = document.querySelectorAll(".user-ul");
-    let listArray = Array.from(cards);
+function pagination() {
+    // Get total number of pages
+    let usersp = document.querySelectorAll(".user-ul");
+    const listArray = Array.from(usersp);
+    // console.log(listArray)
+    // State
+    // Number of products
     const numberOfItems = listArray.length;
     const numberPerPage = 3;
     const currentPage = 1;
+    // Number of pages
     const numberOfPages = Math.ceil(numberOfItems / numberPerPage);
     function accomodatePage(clickedPage) {
         if (clickedPage <= 1) {
@@ -265,19 +271,22 @@ function userPaginate() {
         const currPageNum = accomodatePage(clickedPage);
         if (numberOfPages >= 3) {
             for (let i = -1; i < 2; i++) {
-                $('.paginator').append(`<button class="pagination-btn" value="${currPageNum + i}">${currPageNum + i}</button>`);
+                $('.paginator').append(`<button class="btn btn-primary" value="${currPageNum + i}">${currPageNum + i}</button>`);
             }
         }
         else {
             for (let i = 0; i < numberOfPages; i++) {
-                $('.paginator').append(`<button class="pagination-btn" value="${i + 1}">${i + 1}</button>`);
+                $('.paginator').append(`<button class="btn btn-primary" value="${i + 1}">${i + 1}</button>`);
             }
         }
     }
     function buildPage(currPage) {
         const trimStart = (currPage - 1) * numberPerPage;
         const trimEnd = trimStart + numberPerPage;
+        console.log(trimStart, trimEnd);
+        console.log(listArray.slice(trimStart, trimEnd));
         $('.content').empty().append(listArray.slice(trimStart, trimEnd));
+        // $('.grid-uniform').empty().append(listArray.slice(trimStart, trimEnd));
     }
     $(document).ready(function () {
         buildPage(1);
@@ -285,6 +294,7 @@ function userPaginate() {
         $('.paginator').on('click', 'button', function () {
             var clickedPage = parseInt($(this).val());
             buildPagination(clickedPage);
+            console.log(`Page clicked on ${clickedPage}`);
             buildPage(clickedPage);
         });
     });
