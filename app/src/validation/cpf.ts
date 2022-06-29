@@ -9,7 +9,6 @@ function validateCpf(){
     var erroCpf = document.querySelector("#erroCpf") as HTMLElement;
     var erroInvalidcpf = document.querySelector("#erroInvalidcpf") as HTMLElement;
 
-
     var expression = /^((\d{3}).(\d{3}).(\d{3})-(\d{2}))*$/;
     var regex = new RegExp(expression);
 
@@ -32,7 +31,6 @@ function validateCpf(){
         erroCpf.classList.add("invisible")
     }
 }
-
 
 
 function maskCpf(){

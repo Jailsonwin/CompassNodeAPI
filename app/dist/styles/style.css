@@ -311,11 +311,11 @@ body {
   width: 100%;
 }
 .modal .modalContent .modalInput span {
-  color: rgb(230, 62, 62);
+  color: rgb(255, 0, 0);
   font-size: 12px;
 }
 .modal .modalContent .modalInput .errorInput {
-  border: 2px solid rgb(230, 62, 62) !important;
+  border: 2px solid rgb(255, 0, 0) !important;
 }
 .modal .modalContent .modalInput .invisible {
   display: none;
@@ -482,11 +482,11 @@ body {
   cursor: pointer;
 }
 .addTask-container .form-container span {
-  color: rgb(230, 62, 62);
+  color: rgb(255, 0, 0);
   font-size: 12px;
 }
 .addTask-container .form-container .errorInput {
-  border: 2px solid rgb(230, 62, 62) !important;
+  border: 2px solid rgb(255, 0, 0) !important;
 }
 .addTask-container .form-container .invisible {
   display: none;
@@ -541,11 +541,11 @@ body {
   cursor: pointer;
 }
 .addUser-container a span {
-  color: rgb(230, 62, 62);
+  color: rgb(255, 0, 0);
   font-size: 12px;
 }
 .addUser-container a .errorInput {
-  border: 2px solid rgb(230, 62, 62) !important;
+  border: 2px solid rgb(255, 0, 0) !important;
 }
 .addUser-container a .invisible {
   display: none;
@@ -614,11 +614,11 @@ body {
   cursor: pointer;
 }
 .addUser-container .form-container span {
-  color: rgb(230, 62, 62);
+  color: rgb(255, 0, 0);
   font-size: 12px;
 }
 .addUser-container .form-container .errorInput {
-  border: 2px solid rgb(230, 62, 62) !important;
+  border: 2px solid rgb(255, 0, 0) !important;
 }
 .addUser-container .form-container .invisible {
   display: none;
