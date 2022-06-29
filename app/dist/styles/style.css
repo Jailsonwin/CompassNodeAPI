@@ -586,6 +586,18 @@ body {
   }
 }
 
+.paginator {
+  margin: auto;
+}
+
+.paginator .btn-primary {
+  margin: 2px;
+  background-color: #ffc1a4;
+  border: 1px solid #ff5100;
+  color: #000000;
+  border-radius: 3px;
+}
+
 .tasks-container {
   background-color: #f0fbff;
 }
