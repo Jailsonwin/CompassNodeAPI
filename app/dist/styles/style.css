@@ -462,6 +462,19 @@ body {
   width: 100%;
 }
 
+.modal .modalContent .modalInput span {
+  color: #e63e3e;
+  font-size: 12px;
+}
+
+.modal .modalContent .modalInput .errorInput {
+  border: 2px solid #e63e3e !important;
+}
+
+.modal .modalContent .modalInput .invisible {
+  display: none;
+}
+
 .modal .modalContent .modalButtons {
   width: 100%;
   display: -webkit-box;
@@ -694,6 +707,19 @@ body {
   cursor: pointer;
 }
 
+.addTask-container .form-container span {
+  color: #e63e3e;
+  font-size: 12px;
+}
+
+.addTask-container .form-container .errorInput {
+  border: 2px solid #e63e3e !important;
+}
+
+.addTask-container .form-container .invisible {
+  display: none;
+}
+
 @media screen and (max-width: 790px) {
   .addTask-container a {
     width: 80%;
@@ -760,6 +786,19 @@ body {
   -webkit-transition: 240ms ease-in-out;
   transition: 240ms ease-in-out;
   cursor: pointer;
+}
+
+.addUser-container a span {
+  color: #e63e3e;
+  font-size: 12px;
+}
+
+.addUser-container a .errorInput {
+  border: 2px solid #e63e3e !important;
+}
+
+.addUser-container a .invisible {
+  display: none;
 }
 
 .addUser-container h1 {
@@ -868,6 +907,19 @@ body {
   cursor: pointer;
 }
 
+.addUser-container .form-container span {
+  color: #e63e3e;
+  font-size: 12px;
+}
+
+.addUser-container .form-container .errorInput {
+  border: 2px solid #e63e3e !important;
+}
+
+.addUser-container .form-container .invisible {
+  display: none;
+}
+
 @media screen and (max-width: 790px) {
   .addUser-container a {
     width: 100%;
@@ -900,5 +952,9 @@ body {
   .addUser-container .form-container form .form-rows input {
     width: 100%;
   }
+}
+
+.users-container-none {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */

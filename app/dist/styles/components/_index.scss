@@ -258,6 +258,19 @@ body{
                     width: 100%;
                 }
             }
+
+            span{
+                color: rgb(230, 62, 62);
+                font-size: 12px;
+            }
+        
+            .errorInput{
+                border: 2px solid rgb(230, 62, 62) !important;
+            }
+        
+            .invisible {
+                display: none;
+            }
         }
         .modalButtons {
             width: 100%;
@@ -304,6 +317,8 @@ body{
             }
         }
     }
+
+   
 }
 
 @media screen and (max-width: 790px) {

@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/reset.css">
     <link rel="stylesheet" href="../styles/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>API REST</title>
 </head>
 <body onload="fetchUsers()">
@@ -35,6 +36,12 @@
         </section>
         <section class="main-content">
             <div class="users-container">
+                <ul class="content list-group">
+                </ul>
+                <div class="paginator"></div>
+            </div>
+            <div class="users-container-none">
+
             </div>
         </section>
     </main>
@@ -43,17 +50,34 @@
             <form class="modalInput">
                 <div class="modal-rows">
                     <input type="text" name="name" placeholder="Name" id="nameEdit">
+                    <span id="erroNameE" class="invisible" >This is a required field!</span>
+                    <span id="erroInvalidnameE" class="invisible" >Invalid Name</span>
                     <input type="text" name="cpf" placeholder="CPF" id="cpfEdit">
+                    <span id="erroCpf" class="invisible" >This is a required field!</span>
+                    <span id="erroInvalidcpf" class="invisible" >Invalid Cpf!</span>
                     <input type="date" name="birthDate" id="birthdateEdit">
+                    <span id="erroAge" class="invisible" >This is a required field!</span>
+                    <span id="erroInvalidage" class="invisible" >Must be over 18 years old!</span>
                     <input type="email" name="email" placeholder="Email" id="emailEdit">
+                    <span id="erroEmail" class="invisible" >This is a required field!</span>
+                    <span id="erroInvalidemail" class="invisible" >Invalid email!</span>
                     <input type="text" name="password" placeholder="Password" id="passwordEdit">
+                    <span id="erroPass" class="invisible" >This is a required field!</span>
+                    <span id="erroInvalidpass" class="invisible" >Password must contain at least 6 characters!</span>
                     <input type="text" name="address" placeholder="address" id="addressEdit">
+                    <span id="erroAddress" class="invisible" >This is a required field!</span>
                     <input type="text" name="number" placeholder="number" id="numberEdit">
+                    <span id="erroAddress" class="invisible" >This is a required field!</span>
                     <input type="text" name="complement" placeholder="Complement" id="complementEdit">
+                    <span id="erroAddress" class="invisible" >This is a required field!</span>
                     <input type="text" name="city" placeholder="City" id="cityEdit">
+                    <span id="erroAddress" class="invisible" >This is a required field!</span>
                     <input type="text" name="state" placeholder="State" id="stateEdit">
+                    <span id="erroAddress" class="invisible" >This is a required field!</span>
                     <input type="text" name="country" placeholder="Country" id="countryEdit">
+                    <span id="erroAddress" class="invisible" >This is a required field!</span>
                     <input type="text" name="zipCode" placeholder="zipCode" id="zipCodeEdit">
+                    <span id="erroAddress" class="invisible" >This is a required field!</span>
                 </div>
                 <div class="modalButtons">
                     <button id="modalCancel" class="remove-btn">
@@ -67,5 +91,11 @@
         </div>
     </div>
     <script src="../js/functions/users.js"></script>
+    <script src="../js/validation/name.js"></script>
+    <script src="../js/validation/local-required.js"></script>
+    <script src="../js/validation/password.js"></script>
+    <script src="../js/validation/email.js"></script>
+    <script src="../js/validation/age.js"></script>
+    <script src="../js/validation/cpf.js"></script>
 </body>
 </html>

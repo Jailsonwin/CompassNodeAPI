@@ -20,6 +20,19 @@
             transition: 240ms ease-in-out;
             cursor: pointer;
         }
+
+        span{
+            color: rgb(230, 62, 62);
+            font-size: 12px;
+        }
+
+        .errorInput{
+            border: 2px solid rgb(230, 62, 62) !important;
+        }
+    
+        .invisible {
+            display: none;
+        }
     }
     h1 {
         font-weight: bold;
@@ -72,6 +85,19 @@
                 cursor: pointer;
             }
         }
+
+        span{
+            color: rgb(230, 62, 62);
+            font-size: 12px;
+        }
+
+        .errorInput{
+            border: 2px solid rgb(230, 62, 62) !important;
+        }
+    
+        .invisible {
+            display: none;
+        }
     }
 }
 
@@ -104,4 +130,7 @@
             }
         }
     }
+}
+.users-container-none{
+    display: none;
 }

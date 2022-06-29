@@ -63,6 +63,19 @@
                 cursor: pointer;
             }
         }
+
+        span{
+            color: rgb(230, 62, 62);
+            font-size: 12px;
+        }
+
+        .errorInput{
+            border: 2px solid rgb(230, 62, 62) !important;
+        }
+    
+        .invisible {
+            display: none;
+        }
     }
 }
 
